@@ -1,4 +1,4 @@
-module github.com/wehmoen/llamaproxy
+module github.com/axie-dao/llamaproxy
 
 go 1.22
 

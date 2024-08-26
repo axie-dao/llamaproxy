@@ -71,6 +71,10 @@ func main() {
 		SetHeader("Content-Type", "application/json").
 		SetBaseURL("https://api-gateway.skymavis.com")
 
+	e.GET("/health", func(c echo.Context) error {
+		return c.String(http.StatusOK, "OK")
+	})
+
 	e.POST("/graphql/katana", func(c echo.Context) error {
 
 		client.SetHeader("Accept", c.Request().Header.Get("Accept")).
